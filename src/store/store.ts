@@ -9,7 +9,7 @@ import {baseApi} from "@/store/baseApi";
 import appSlice, {backDropAction} from '@/store/slice'
 
 // Define a custom middleware for authentication-related actions
-const authMiddleware = api => next => action => {
+const authMiddleware = (api: any) => (next: any) => (action: any) => {
 	// Check if the action is an async thunk action
 	if (isAsyncThunkAction(action)) {
 		// Dispatch a backdrop action indicating the pending state of the action
