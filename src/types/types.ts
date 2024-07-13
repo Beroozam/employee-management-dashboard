@@ -1,3 +1,5 @@
+import {EmployeeFormData} from "@/helpers/employeeSchema";
+
 export type Employee = {
 	id: number,
 	name: string,
@@ -7,3 +9,8 @@ export type Employee = {
 	email: string,
 	phone: string
 };
+
+export interface Props {
+	employee?: Employee;
+	onSubmit: (employee: EmployeeFormData) => Promise<void>;
+}

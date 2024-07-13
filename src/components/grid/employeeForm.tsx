@@ -21,7 +21,7 @@ const EmployeeForm = ({ employee, onSubmit }: Props) => {
 	// State to manage form submission status
 	const [isSubmitting, setSubmitting] = useState<boolean>(false);
 	// State to manage the list of positions based on the selected department
-	const [position, setPosition] = useState<string[]>(positions["Engineering"]);
+	const [position, setPosition] = useState<string[]>(employee?positions[employee?.department]:positions["Engineering"]);
 
 	// Initialize the form with react-hook-form and zod for validation
 	const {
@@ -107,6 +107,7 @@ const EmployeeForm = ({ employee, onSubmit }: Props) => {
 						type="number"
 						{...register("age")}
 						color={`${errors.age && 'failure'}`}
+						placeholder={'25'}
 					/>
 				</div>
 
