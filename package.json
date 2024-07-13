@@ -5,10 +5,11 @@
   "scripts": {
     "dev": "next dev -p 2030",
     "build": "next build",
-    "start:w": "next start",
+    "start:w": "next start -p 3001",
     "lint": "next lint",
     "server": "json-server --watch src/data/db.json --delay 500",
-    "start": "concurrently \"npm run server\" \"npm run dev\""
+    "start": "concurrently \"npm run server\" \"npm run start:w\"",
+    "start:dev": "concurrently \"npm run server\" \"npm run dev\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
