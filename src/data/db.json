@@ -14,7 +14,7 @@
       "name": "Jane Smith",
       "age": 25,
       "department": "Marketing",
-      "position": "Marketing Specialist",
+      "position": "Brand Manager",
       "email": "jane.smith@example.com",
       "phone": "555-2345"
     },
@@ -23,7 +23,7 @@
       "name": "Mike Johnson",
       "age": 35,
       "department": "HR",
-      "position": "HR Manager",
+      "position": "HR Specialist",
       "email": "mike.johnson@example.com",
       "phone": "555-3456"
     },
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "name": "Chris Lee",
-      "age": 40,
+      "age": 41,
       "department": "IT",
       "position": "System Administrator",
       "email": "chris.lee@example.com",
