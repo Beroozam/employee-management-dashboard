@@ -13,6 +13,7 @@ The Employee Management Dashboard is a responsive web application designed for m
 - **API Integration**: Interact with an API to perform CRUD operations on employee data.
 - **Loading State**: Display a loading spinner during asynchronous operations.
 - **Notifications**: Use `react-toastify` for user feedback and notifications.
+- **CI/CD**: Use ci/cd in github actions to automate the app deployment.
 
 ## Setup
 
