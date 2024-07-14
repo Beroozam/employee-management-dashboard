@@ -20,7 +20,7 @@ const CreateEmployeeFormModal = ({ onSubmit }: Props) => {
 	return (
 		<>
 			<Modal show={openModal} size="xl" onClose={onCloseModal} popup>
-				<Modal.Header />
+				<Modal.Header className={`ps-6 pt-4 mb-4`}>Create Employee</Modal.Header>
 				<Modal.Body>
 					<EmployeeForm onSubmit={onSubmit} />
 				</Modal.Body>

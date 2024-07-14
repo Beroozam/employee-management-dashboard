@@ -15,7 +15,7 @@ const UpdateEmployeeFormModal = ({employee,onSubmit}:Props) => {
 	return (
 		<>
 			<Modal show={openModal} size="xl" onClose={onCloseModal} popup>
-				<Modal.Header>Update Employee</Modal.Header>
+				<Modal.Header className={`ps-6 pt-4 mb-4`}>Update Employee</Modal.Header>
 				<Modal.Body>
 					<EmployeeForm onSubmit={onSubmit} employee={employee}/>
 				</Modal.Body>
