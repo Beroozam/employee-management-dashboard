@@ -10,6 +10,7 @@ import AddEmployee from "@/components/grid/addEmployee";
 import UpdateEmployee from "@/components/grid/updateEmployee";
 import UpdateEmployeeFormModalComponent from "@/components/grid/updateEmployeeFormModalComponent";
 import GridSkeleton from "@/components/grid/gridSkeleton";
+import EmployeeLink from "@/components/grid/employeeLink";
 
 const GridEmployees = () => {
 
@@ -17,9 +18,11 @@ const GridEmployees = () => {
 
 	// Column Definitions: Defines the columns to be displayed.
 	const [colDefs] = useState([
-		{ field: "id" },
+		// custom components for link to show details of each employee in additional column
+		{ field:"show_employee" , cellRenderer:EmployeeLink},
+		{ field: "id" , width: 50},
 		{ field: "name" },
-		{ field: "age" },
+		{ field: "age" , width: 60},
 		{ field: "department" },
 		{ field: "position" },
 		{ field: "email" },
