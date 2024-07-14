@@ -20,8 +20,8 @@ The Employee Management Dashboard is a responsive web application designed for m
 
 Ensure you have the following installed:
 
-- Node.js (>= 14.x)
-- npm or yarn
+- Node.js
+- npm
 
 ### Installation
 
@@ -36,59 +36,33 @@ Ensure you have the following installed:
 
    ```bash
    npm install
-   # or
-   yarn install
+   
    ```
 
-3. **Environment Variables**
-
-   Create a `.env` file in the root directory and add the following environment variable:
-
-   ```env
-   NEXT_PUBLIC_BASE_URL=http://localhost:3000
-   ```
-
-4. **Run the Development Server**
+3. **Run the Development Server**
 
    ```bash
-   npm run dev
-   # or
-   yarn dev
+   npm run start:server
    ```
 
-   Open your browser and navigate to `http://localhost:3000` to view the application.
+   Open your browser and navigate to `http://localhost:2030` to view the application.
+   
+   and open `http://localhost:3000` to view json-server page. 
+   and open `http://localhost:3000/employee` to view resources 
 
-## Components
+4. **Run the app in vercel**
 
-### `EmployeeFormSchema`
+   Open this link in github about `https://employee-management-dashboard-coral.vercel.app/`
+   to view the live demo
 
-- **Location**: `src/schemas/employeeFormSchema.ts`
-- **Description**: Defines the validation schema for employee forms using Zod.
+   You should run json-server in your local machine to use the data locally otherwise the app will not display properly.
 
-### `ErrorMessage`
+   ```bash
+    npm run start:server
+    # or
+    npm run server    
+   ```
 
-- **Location**: `src/components/ErrorMessage.tsx`
-- **Description**: A component to display error messages from form validation.
-
-### `CreateEmployeeFormModal`
-
-- **Location**: `src/components/CreateEmployeeFormModal.tsx`
-- **Description**: A modal component for creating a new employee. It uses `EmployeeForm` and is controlled via Redux state.
-
-### `DialogProvider`
-
-- **Location**: `src/components/DialogProvider.tsx`
-- **Description**: Provides a Toast container for notifications and a backdrop for loading states.
-
-### `authenticationEndPoints`
-
-- **Location**: `src/api/authenticationEndPoints.ts`
-- **Description**: Defines API endpoints for employee CRUD operations using `createApi` from `@reduxjs/toolkit/query/react`.
-
-### `RemoveEmployee`
-
-- **Location**: `src/components/RemoveEmployee.tsx`
-- **Description**: A button component to remove an employee by ID.
 
 ## Redux State Management
 
