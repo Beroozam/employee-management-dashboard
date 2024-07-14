@@ -9,10 +9,11 @@ import RemoveEmployee from "@/components/grid/removeEmployee";
 import AddEmployee from "@/components/grid/addEmployee";
 import UpdateEmployee from "@/components/grid/updateEmployee";
 import UpdateEmployeeFormModalComponent from "@/components/grid/updateEmployeeFormModalComponent";
+import GridSkeleton from "@/components/grid/gridSkeleton";
 
 const GridEmployees = () => {
 
-	const {data} = useGetAllEmployeesQuery({})
+	const {data,isLoading} = useGetAllEmployeesQuery({})
 
 	// Column Definitions: Defines the columns to be displayed.
 	const [colDefs] = useState([
@@ -31,11 +32,14 @@ const GridEmployees = () => {
 			width:200}
 	]);
 
+	// grid skeleton effect while data is loading
+	if(isLoading) return <GridSkeleton />
+
 	return (
 		// wrapping container with theme & size
 		<div
 			className="w-full ag-theme-quartz" // applying the Data Grid theme
-			style={{ height: "75vh" }} // the Data Grid will fill the size of the parent container
+			style={{ height: "70vh" }} // the Data Grid will fill the size of the parent container
 		>
 			<AddEmployee />
 			<AgGridReact
