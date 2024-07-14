@@ -1,10 +1,15 @@
 "use client"
 import React from 'react';
-import {Employee} from "@/types/types";
 import EmployeeItem from "@/components/employee/employeeItem";
+import {useGetEmployeeQuery} from "@/components/grid/endPoints";
 
 // employee card details
-const EmployeeDetails = ({details}:{details:Employee}) => {
+const EmployeeDetails = ({id}:{id:string}) => {
+
+	const {data:details} = useGetEmployeeQuery({id})
+
+	if(!details) return null
+
 	return (
 		<div className={`flex flex-col rounded-lg shadow p-4 max-w-[320px] mx-auto`}>
 			<EmployeeItem item={'Employee Name:'} itemValue={details.name} />
