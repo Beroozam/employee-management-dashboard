@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Employee Management Dashboard
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The Employee Management Dashboard is a responsive web application designed for managing employee data within a company. This project features a set of components and Redux-based state management to handle employee data, including adding, updating, and removing employees.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Employee Management**: Create, update, and delete employee records.
+- **Modals**: Use modals for forms to add and update employee information.
+- **State Management**: Use Redux for state management with `@reduxjs/toolkit`.
+- **API Integration**: Interact with an API to perform CRUD operations on employee data.
+- **Loading State**: Display a loading spinner during asynchronous operations.
+- **Notifications**: Use `react-toastify` for user feedback and notifications.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Setup
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+Ensure you have the following installed:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js
+- npm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the Repository**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   git clone https://github.com/Beroozam/employee-management-dashboard.git
+   cd employee-management-dashboard
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   
+   ```
+
+3. **Run the Development Server**
+
+   ```bash
+   npm run start:server
+   ```
+
+   Open your browser and navigate to `http://localhost:2030` to view the application.
+   
+   and open `http://localhost:3000` to view json-server page. 
+   and open `http://localhost:3000/employee` to view resources 
+
+4. **Run the app in vercel**
+
+   Open this link in github about `https://employee-management-dashboard-coral.vercel.app/`
+   to view the live demo
+
+   You should run json-server in your local machine to use the data locally otherwise the app will not display properly.
+
+   ```bash
+    npm run start:server
+    # or
+    npm run server    
+   ```
+
+
+## Redux State Management
+
+### `store`
+
+- **Location**: `src/store/store.ts`
+- **Description**: Configures the Redux store with API slices and middleware.
+
+### `appSlice`
+
+- **Location**: `src/store/slice.ts`
+- **Description**: Defines the state and reducers for managing application state, including modals and loading states.
+
+### `baseApi`
+
+- **Location**: `src/store/baseApi.ts`
+- **Description**: Configures the base API with axios and defines common query/mutation functions.
+
+## Custom Hooks
+
+- **`useAppDispatch`**: Custom hook for dispatching Redux actions.
+- **`useAppSelector`**: Custom hook for selecting Redux state.
+
+
+## Contact
+
+For any questions or feedback, please reach out to [behrouz.dev@gmail.com](mailto:behrouz.dev@gmail.com).
