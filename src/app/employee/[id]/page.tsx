@@ -3,7 +3,7 @@ import Header from "@/components/employee/header";
 
 // async fetch to get employee from json server by provided id
 async function getEmployee (id: string){
-	const response = await fetch(`http://localhost:3000/employee/${id}`)
+	const response = await fetch(`http://localhost:3000/employee/${id}`,{cache:"no-store"})
 	return await response.json()
 }
 
